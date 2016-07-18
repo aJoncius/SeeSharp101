@@ -62,9 +62,16 @@ namespace SeeSharp101.tests.Basics
         [TestMethod]
         public void Should_Return_Correct_Identity()
         {
-            var graph = new Graph("Master Graph");
+            var graph = new Graph("Master Graph", new int[3,3]);
             Assert.AreEqual(graph.Name, "Master Graph");
             Assert.AreEqual(graph.Description, "One Graph to Rule Them All");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Should_Throw_Argument_Exception_For_Invalid_Adjacency_Matrix()
+        {
+            var graph = new Graph("Master Graph", new int[1, 3]);
         }
     }
 }

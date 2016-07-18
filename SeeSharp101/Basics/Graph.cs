@@ -8,23 +8,43 @@ namespace SeeSharp101.Basics
 {
     public class Graph
     {
+        // Fields
         private string _name = "Master Graph";
         private string _description = "One Graph to Rule Them All";
 
+        // Properties
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+
+            set
+            {
+                _name = Name;
+            }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return _description;
+            }
+
+            set
+            {
+                _description = Description;
+            }
+        }
+
+        //Constructors
         public Graph(string name, string description = "One Graph to Rule Them All")
         {
-            _name = name;
-            _description = description;
+            Name = name;
+            Description = description;
         }
-
-        public string GetName()
-        {
-            return _name;
-        }
-
-        public string GetDescription()
-        {
-            return _description;
-        }
+        
     }
 }

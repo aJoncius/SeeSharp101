@@ -63,8 +63,8 @@ namespace SeeSharp101.tests.Basics
         public void Should_Return_Correct_Identity()
         {
             var graph = new Graph("Master Graph");
-            Assert.AreEqual(graph.GetName(), "Master Graph");
-            Assert.AreEqual(graph.GetDescription(), "One Graph to Rule Them All");
+            Assert.AreEqual(graph.Name, "Master Graph");
+            Assert.AreEqual(graph.Description, "One Graph to Rule Them All");
         }
     }
 }

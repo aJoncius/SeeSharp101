@@ -73,6 +73,7 @@ namespace SeeSharp101.tests.Basics
         {
             var graph = new Graph("Master Graph", new int[1, 3]);
         }
+<<<<<<< HEAD
 
         [TestMethod]
         public void Should_Report_Graph_Is_Connected()
@@ -85,5 +86,7 @@ namespace SeeSharp101.tests.Basics
         {
 
         }
+=======
+>>>>>>> origin/master
     }
 }

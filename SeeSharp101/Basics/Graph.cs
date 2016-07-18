@@ -14,8 +14,11 @@ namespace SeeSharp101.Basics
         public string Description { get; private set; }
 
         public int[,] AdjacencyMatrix { get; private set; }
+<<<<<<< HEAD
 
         public bool IsConnected { get; private set; }
+=======
+>>>>>>> origin/master
 
         // Constructors
         public Graph(string name, int[,] adjacencyMatrix, string description = "One Graph to Rule Them All")

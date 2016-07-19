@@ -73,20 +73,17 @@ namespace SeeSharp101.tests.Basics
         {
             var graph = new Graph("Master Graph", new int[1, 3]);
         }
-<<<<<<< HEAD
 
         [TestMethod]
         public void Should_Report_Graph_Is_Connected()
         {
-            var graph = new Graph("Master Graph", new int[3, 3] { { 0, 1, 1 },{ 1, 0, 1 },{ 1, 1, 0 } });
+            var graph = new Graph("Master Graph", new int[3, 3] { { 0, 1, 1 }, { 1, 0, 1 }, { 1, 1, 0 } });
         }
 
         [TestMethod]
         public void Should_Report_Graph_Is_Not_Connected()
         {
-
+            var graph = new Graph("Master Graph", new int[3, 3] { { 0, 1, 0 }, { 1, 0, 0 }, { 0, 0, 0 } });
         }
-=======
->>>>>>> origin/master
     }
 }

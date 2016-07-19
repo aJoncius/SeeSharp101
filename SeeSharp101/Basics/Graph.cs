@@ -14,11 +14,29 @@ namespace SeeSharp101.Basics
         public string Description { get; private set; }
 
         public int[,] AdjacencyMatrix { get; private set; }
-<<<<<<< HEAD
 
-        public bool IsConnected { get; private set; }
-=======
->>>>>>> origin/master
+        public bool IsConnected {
+            get
+            {
+                var connected = new bool[AdjacencyMatrix.GetLength(0)];
+                Check(0, connected);
+                return !connected.Any(b => b == false);
+            }
+
+            private set { }
+        }
+
+        private void Check(int vertex, IList<bool> connected)
+        {
+            for (int i = 0; i < AdjacencyMatrix.GetLength(0); i++)
+            {
+                if (AdjacencyMatrix[vertex, i] == 1 && !connected[i])
+                {
+                    connected[i] = true;
+                    Check(i, connected);
+                }
+            }
+        }
 
         // Constructors
         public Graph(string name, int[,] adjacencyMatrix, string description = "One Graph to Rule Them All")

@@ -78,12 +78,19 @@ namespace SeeSharp101.tests.Basics
         public void Should_Report_Graph_Is_Connected()
         {
             var graph = new Graph("Master Graph", new int[3, 3] { { 0, 1, 1 }, { 1, 0, 1 }, { 1, 1, 0 } });
+            var graph2 = new Graph("Master Graph", new int[5, 5] { { 0, 1, 1, 0, 0 }, { 1, 0, 0, 0, 0 }, { 1, 0, 0, 1, 1 }, { 0, 0, 1, 0, 0, }, { 0, 0, 1, 0, 0 } });
+            Assert.AreEqual(graph.IsConnected, true);
+            Assert.AreEqual(graph2.IsConnected, true);
+
         }
 
         [TestMethod]
         public void Should_Report_Graph_Is_Not_Connected()
         {
             var graph = new Graph("Master Graph", new int[3, 3] { { 0, 1, 0 }, { 1, 0, 0 }, { 0, 0, 0 } });
+            var graph2 = new Graph("Master Graph", new int[5, 5] { { 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 0 }, { 0, 0, 0, 1, 1 }, { 0, 0, 1, 0, 0, }, { 0, 0, 1, 0, 0 } } );
+            Assert.AreEqual(graph.IsConnected, false);
+            Assert.AreEqual(graph2.IsConnected, false);
         }
     }
 }

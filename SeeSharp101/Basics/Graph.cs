@@ -28,11 +28,11 @@ namespace SeeSharp101.Basics
 
         private void Check(int vertex, IList<bool> connected)
         {
+            connected[vertex] = true;
             for (int i = 0; i < AdjacencyMatrix.GetLength(0); i++)
             {
-                if (AdjacencyMatrix[vertex, i] == 1 && !connected[i])
+                if (AdjacencyMatrix[vertex, i] != 0 && !connected[i])
                 {
-                    connected[i] = true;
                     Check(i, connected);
                 }
             }
